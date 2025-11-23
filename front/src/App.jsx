@@ -1,22 +1,12 @@
-import LineChart from "./assets/components/LineChart";
-import PieChart from "./assets/components/PieChart";
-import BarChart from "./assets/components/BarChart";
+import { Routes, Route } from "react-router";
+import Home from "./assets/components/Home";
 
 function App() {
   return (
     <>
-      <h1>Mes Graphiques</h1>
-
-      <div style={{ width: "600px" }}>
-        <LineChart />
-      </div>
-
-      <div style={{ width: "400px", marginTop: "40px" }}>
-        < PieChart />
-      </div>
-      <div style={{ width: "400px", marginTop: "40px" }}>
-        <BarChart />
-      </div>
+      <Routes>
+        <Route path="/" element={< Home />}></Route>
+      </Routes>
     </>
   );
 }
